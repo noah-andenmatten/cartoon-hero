@@ -11,8 +11,12 @@ color:green;
     text-transform: uppercase;
 }
 .big.uppercase{
-    color: navy;
+    color: palevioletred;
 }
 h1 span{
-    color: turquoise;
+    color: rgb(101, 224, 64);
+    background-color: purple;
+}
+body{
+    background-color: red;
 }
