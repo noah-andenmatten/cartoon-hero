@@ -57,6 +57,7 @@ a:hover{
     opacity: .7;
 }
 
+/* a for links and opacity goes from 0 to 1 */
 footer a:hover{
     background-color: white;
     color: yellowgreen;
@@ -86,4 +87,11 @@ p.caption{
     font-style: italic;
     margin-top: 0;
     font-size: 75%;
+}
+
+.box{
+    border: 2px solid blueviolet;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    padding: 10px;
 }
