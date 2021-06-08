@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+    <h3>only needs ; if you do not use a new line</h3>
+    <script>
+        
+        function greeting(name="Maui", age=2) { //always put () if it has to do sth, can set multiple parameters(=everything in ())
+            console.log("Hello " + name); //can set defaut parameter with =
+            console.log("Age is " + age);
+
+            return age + " Büsii"; //if function runs and is stored into variable the value of the variable will now be Büsii
+            //everything below return will not be executed
+        }
+
+        var varName = greeting() //used to execute function
+        var Noah = greeting("Noah", 22)
+        var Kala = greeting("Kala", 1)
+        console.log(varName)
+
+    </script>
+
+
+</body>
+</html>
