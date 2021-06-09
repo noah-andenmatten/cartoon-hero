@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User input </title>
+<head>
+    <title>Accepting user input </title>
+</head>
+<body>
+    <h1>Your input was: </h1>
+    <h3 id="customInput">________</h3>
+
+
+    <script>
+
+        var name= prompt("What is your name?", "I don't know") //accept user input and save it into variable - after , the defoult(already filled in) //
+        console.log("Your name is: ", name) // used to show entered value in console//
+        
+        var h3Node= document.getElementById("customInput") // grab a node //
+        h3Node.innerText = name.toLowerCase() // change value of node (just changed var name one time in inner text to lower case but preserved caps in variable)//
+        console.log(name)
+            //prepares for event listeners = when an action happens//
+
+    </script>
+    
+</body>
+</html>

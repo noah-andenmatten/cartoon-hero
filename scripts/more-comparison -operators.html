@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>more comparison operators</title>
+</head>
+<body>
+
+    <script>
+
+        var name = "Noah Andenmatten"
+        if (name.length >=10) {
+            console.log(
+                "You have a long name",
+                name.length)
+        }
+
+        var age = "22";
+        age = Number(age) //typecasted so it returns === true
+        if (age === 22) { //=== datatype and value has to be equal (is faster performing code)
+            console.log("You are 22") //also true if you enter 22.0 (because Decimals,Float&Integers are all typeof Number)
+        } else {
+            console.log("wrong data type") //"22" is a string and not a number
+        }
+
+    </script>
+    
+</body>
+</html>

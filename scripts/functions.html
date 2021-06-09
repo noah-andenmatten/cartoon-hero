@@ -8,6 +8,8 @@
 </head>
 <body>
     <h3>only needs ; if you do not use a new line</h3>
+    <h1 id="title"></h1>
+    <h2 id="temperature"></h2>
     <script>
         
         function greeting(name="Maui", age=2) { //always put () if it has to do sth, can set multiple parameters(=everything in ())
@@ -25,6 +27,59 @@
 
     </script>
 
+    <script>
+
+        function doMath(num) {
+            num = Number(num);
+            if (num) {
+                //is a real number
+                var newNumber = (num + 100) / 3;
+                return newNumber
+            } else {
+                //not a real number
+                return false;
+            }
+        }
+
+    var customNum = doMath(332)
+    console.log(customNum)
+    var customNum = doMath("Noah") //returns fals because it is not a number
+    console.log(customNum)
+    var customNum = doMath(-112)
+    console.log(customNum)
+    var customNum = doMath(4.5)
+    console.log(customNum)
+    
+
+    function $(id) {
+        return document.getElementById(id) //used to simplify code
+    }
+    var title = $("title")
+    title.innerHTML = "custom inner text"
+
+    //cellcius to fahreneit
+    function CToF(c_Num) {
+        var fahrenheit = c_Num * 1.8 + 32
+        return fahrenheit;
+    }
+
+    var zero = CToF(0); console.log(zero);
+    var freezing = CToF(-40); console.log(freezing);
+    var roomtemp = CToF(24); console.log(roomtemp);
+    var boiling = CToF(100); console.log(boiling);
+
+
+    /* !! does not work 
+    var enter = prompt("Enter a temperature in Celsius.")
+    var temp = CToF(enter)
+    var temperature = document.getElementById("temperature")
+    temperature.innerHTML =  fahrenheit 
+    !! */
+
+    </script>
+
+
+    
 
 </body>
 </html>

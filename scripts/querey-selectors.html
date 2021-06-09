@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>querey selectors</title>
+</head>
+<body>
+    
+    <h1>Query selectors are used to grab class by and only one of them</h1>
+    
+    <small>this one is first </small>
+    <h1 class="title"> 
+        Hello World, this is the title
+        <small>Change me too!</small> 
+    </h1>
+    
+    <a href="#">change link text </a>
+
+    <ul>
+        <li>Number 1</li>
+        <li>Number 2</li>
+        <li>Number 3</li>
+        <li>Number 4</li>
+        <li>Number 5</li>
+    </ul>
+
+    
+
+    <script>
+        var title= document.querySelector(".title")
+        /* title.innerHTML = "Changed using a class" 
+        var small = document.querySelector("small")     //used to change just thing in small
+        small.innerHTML = "Wow i am tiny text" */   
+
+        var small = title.querySelector("small") //used to select element of child element of class
+        small.innerHTML = "WOOOOOW"
+
+        var a = document.querySelector("a")
+        a.innerHTML = "Coding for everybody .com"
+
+        var lis = document.querySelectorAll("li") //creates a Nodelist (looks like array)
+
+    </script>
+
+
+<input type="text" style="padding: 30px; font-size: 30px;" class="form-control" value="Hello World blah blah blah"> 
+<!-- value = .... used to set default value-->
+
+    <script>
+        var input = document.querySelector(".form-control") //
+        console.log(input.value) //.value to acces just the value of it
+    </script>
+</body>
+</html>

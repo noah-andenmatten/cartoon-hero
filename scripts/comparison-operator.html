@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparison Operator and opposite operators</title>
+</head>
+<body>
+    
+    <h1 id="welcome"></h1>
+    <h1 id="user"></h1>
+    
+    
+    <!-- if name is noah do something
+    else: do sth else -->
+        <script>
+           
+            var name= prompt("What is your name?") // var name= "noah" , (= hier assignment operator)//
+            var welcomeNode= document.getElementById("welcome")
+            var nameLower = name.toLowerCase() //to make input not caps sensitive//
+            var userNode= document.getElementById("user")
+
+
+            if (nameLower == "noah") {
+                welcomeNode.innerText= "Welcome to your Website Noah" 
+                // in () das was verglichen wird, in {} aktion die ausgeführt wird, //
+                //== hier comparison operator // // if statements are boolean (either true or false)//
+            } else {
+                welcomeNode.innerText= "Your are a troll" 
+                userNode.innerText= name
+                
+           
+                
+            } 
+
+
+           
+
+        </script>
+
+
+</body>
+</html>

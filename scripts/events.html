@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <h1>Events</h1>
+
+    <button class="btn btn-primary" 
+    type="button" 
+    onclick="clickMe()" 
+    > <!--integrats a button to webpage-->
+    <!--integrate function in onClick-->
+        CLICK ME
+    </button>
+    <br/>
+
+    <script>
+        var totalClicks = 0
+
+        function clickMe() {
+            totalClicks = totalClicks + 1 //alternative: totalClicks++
+            console.log("You've clicked this button " + totalClicks + " times")
+            console.log("click")
+        }
+    </script>
+
+    
+    <!--new buton connected with an imnput element-->
+    <input type="number" class="form-control" style="padding: 30px; font-size: 30px; 
+    color: aquamarine; border: 5px solid blueviolet; margin-top: 100px;">
+    <br/>
+    <button class="btn btn-secondary" style="background-color: chartreuse; color: gray; font-size: 20px;"
+            onclick="calculate()">
+        Add 100
+    </button>
+
+    <h1 id="h1">The total is: <span>N/A</span></h1>
+
+    <script>
+        var num = 100
+
+        function calculate() {
+            var input = document.querySelector(".form-control"); //WICHTIG . nicht vergessen
+            var value = Number(input.value);
+            var output = value + num;
+            
+            var h1 = document.querySelectorAll("h1")[1] //or: document.getElementById("h1")
+            var span = h1.querySelector("span")
+
+            span.innerText = output
+        }
+        
+
+    </script>
+
+
+</body>
+</html>

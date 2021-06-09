@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mini project number 3</title>
+</head>
+<body>
+    <H1>Mini project number 3</H1>
+    <li>Ask user for Number</li> 
+    <li>Cast imput to a number</li>
+    <li>Make sure number is valid</li>
+    <li>If number is over 18 cahange some text on page</li>
+
+    <h4 id="over18">You are not 18!</h4>
+
+
+    <script>
+        var over18 = document.getElementById("over18")
+        var age = prompt("How old are you?")
+        age = Number(age)
+
+        if (age) {
+            console.log("They have entered their age")
+        } /*else {
+            prompt("Please enter a number, How old are you?")
+        } */
+        if (age >= 18) {
+            over18.innerHTML = "Congrats you can vote!"
+        } 
+
+        /* if (age && age >= 18) { //use && to check multiple if statements at the same time
+            console.log("They have entered their age"),
+            over18.innerHTML = "Congrats you can vote!"
+        } */
+
+
+
+    </script>
+
+
+</body>
+</html>

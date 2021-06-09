@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini project nr 2</title>
+</head>
+
+<body>
+    <!-- 1. ask user for url with prompt
+    2. check if link starts with http using sub string 
+    3. if it does not start with http fix it with if or if else 
+    4. inject link into page using .innerHTML grab inner html node and change it-->
+
+    <h1>Your link is here: <span id="link"></span> </h1>
+
+<script>
+    var url= prompt("Enter your URL here:")
+  
+    if (url== null) {
+        alert("Cancel this quickly") //or console.error("Mission input")
+    }
+
+    if (url.substring(0,4)=="http" ) {
+        console.log("The URL is good") //not necessary
+    } else {
+        console.warn("Bad URL") //not necessary
+        url = "http://" + url
+    }
+    /*if (url.substring(0,4)!="http" ) {
+        url = "http://" + url //altenative shorter version*/
+
+    var spanNode= document.getElementById("link") //get html element by id
+    var html= "<a href='" + url + "'> " + url + " </a>" //make into link
+    spanNode.innerHTML= html //insert back into htlm
+
+    </script>
+
+</body>
+notes 
+
+    <script> //multiple if statement variation other to if -> else if -> else(optional if not added it does nothing) just instrucion
+
+    var name= "Noah"
+
+        switch(name){
+            case "Noah":
+                console.log("Hi Noah")
+                break;
+            case "Kala":
+                console.log("Hi Kala")
+                break;
+            default:
+                console.warn("Not handeled")
+                break;
+        }
+"not a coment anymore" //shows as (notes) in webpage
+    </script>
+
+</html>
+

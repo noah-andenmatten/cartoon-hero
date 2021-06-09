@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array & type of & type casting</title>
+</head>
+
+    <h1>An array is a list</h1>
+
+<body>
+
+    <script>
+
+        var age = 22;
+        console.log("Age is: ", typeof(age)); //is type of number
+
+        var pronouns = "he/him";
+        console.log("Pronouns are: ", typeof(pronouns)); //is type of string
+
+        var name = ["Noah", "Apple", "stringibingi"];
+        console.log("Name list is: ", typeof(name)); //is type of string, but should be object
+
+        var isCat = true;
+        console.log("Are you a cat is: ", typeof(isCat)); //is type of boolean
+
+        var alter = prompt("Whart is your age?")
+        alter = Number(alter) //typecaste the variable alter (if you do not enter a number it returns NaN(Not a Number))
+                            //also works with String(variable)
+        if (alter) {
+            alert("You have entered a proper number")
+        }
+            if (age >= 18) {
+            console.log("you are able to vote")
+        }
+        console.log(typeof(alter)) //returns as a string
+
+        //if using "true" as a sring and then make Boolean(var) then it reads as a true boolean
+
+        var course = "Javascript for beginners"
+        course = Array(course)
+        console.log(course)
+
+    </script>
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boolean operators</title>
+</head>
+<body>
+    <!--Boolean can only take two values (either true or false / 0 and 1)
+    not written as string with "" just true / false -->
+    
+    <script>
+
+       /* var isCat= false
+
+        if (isCat) { //no ==true necessary beacause always searching for true statement
+            console.log("Kala is a cat")
+        } else {
+            console.log("Is not a cat")
+        } */
+
+        var name= prompt("Enter name","Kala")
+
+        if (name.toLowerCase()=="kala") {
+            var isCat= true
+        } else {
+            var isCat= false
+        }
+            /*could also say var isCat = 1; (true)
+              or var isCat = 0; (false) */
+
+        if (isCat) {
+            alert("You are a cat")
+        } else {
+            alert("You aint no cat")
+        }
+
+        if (isCat==false) {
+            alert("You aint no kitty") //shows first else statement, them if false statement (executes both)
+        }
+
+        if (!isCat) { //! wird zum ferneinen benutzt (ungleich zeichen)
+            alert("tu pue")
+        }
+        //console: typeof(isCat)--> "boolean"
+    </script>
+
+
+
+</body>
+</html>
