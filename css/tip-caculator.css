@@ -1,0 +1,20 @@
+h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 35px;
+    color: rgb(54, 10, 95);
+    margin-top: 10px;
+}
+
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: medium;
+    color: blueviolet;
+    margin-top: 0;
+}
+
+input{
+    font-size: large;
+    color: green;
+    border: indigo, 4px;
+}
+

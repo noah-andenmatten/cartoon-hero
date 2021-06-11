@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anonymous functions & IIFE</title>
+</head>
+<body>
+    <h1>Anonymous functions are used if the function only needs to run once</h1>
+    <h1>IIFE = Immedeatly Invoked Function Expression </h1>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <input type="text" class="form-control 
+                js-customName" value="Pin Gu">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var getName = (function() {
+            return document.querySelector(".js-customName").value //used only once
+                    })(); //with (function)(); it is automaticly run as soon as you open the page
+                    //it is an IIFE 
+
+            //stores function in getName (acces using var getName)
+        // console.log("Hi my name is " + getName()) //put this into console
+
+
+        //does not run automaticly
+        function LoadApp() {
+            console.log("App is loading")
+            //logic in page (maby animation)
+            console.log("App is loaded")
+        }
+
+
+        //runs automaticly (IIFE)
+        (function LoadApp() {
+            console.log("App is loading")
+            //logic in page (maby animation)
+            console.log("App is loaded")
+        })();
+
+
+    </script> 
+
+</body>
+</html>

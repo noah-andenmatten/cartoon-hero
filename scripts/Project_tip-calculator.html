@@ -1,12 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/tip-caculator.css"> <!--accessing css file-->
     <title>Tip calculator</title>
 </head>
 <body>
+    <h1>Tip Calculator</h1>
     
+    <h2>Enter the bill amount here:</h2>
+    <input 
+        type="Number" 
+        name="bill" 
+        id="billAmount">
+
+    <h2>Enter the tip percentage here:</h2>
+    <input 
+        type="Number" 
+        name="tip" 
+        id="tipAmount" 
+        >
+
+    <br/>
+    <button 
+        class="btn btn-primary"
+        onclick="calculate()"
+    ></button>
+
+    <script>
+        
+        
+        
+
+        function calculate(billAmount, tipAmount=15) {
+            var billAmount = Number(document.getElementById("billAmount").value)
+            var tipAmount = Number (document.getElementById("tipAmount").value
+
+            tipAmount = tipAmount / 100;
+            var totalTip = billAmount * tipAmount;
+            document.querySelector(".tipAmount").innerHTML = totalTip;
+
+            console.log(totalTip)
+            var totalAmount = totalTip + billAmount;
+            
+            return totalTip;
+
+        }
+
+        
+    </script>
+
+
+
 </body>
 </html>
