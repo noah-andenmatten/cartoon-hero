@@ -14,14 +14,51 @@
     <script>
         for (let i = 0; i < 10; i++) { //from i=0 to i<10
             console.log(i)
-
-            
         }
 
+        var names = ["Noah", "Maui", "Kala", "Doggo"] //Array
+
+        for (let index = 0; index < names.length; index++) { //i= interval
+            var currentName = names[index]      //used to go through all names
+            console.log(currentName)            //shows us all names in console
+        }
+
+        function toEmailAddress(name) {
+            return name.toLowerCase() + "@gmail.com"    //used to form email address
+            
+        }
+        for (let index = 0; index < names.length; index++) {
+            var currentName = toEmailAddress(names[index])      //imply function into loop
+            console.log(currentName)
+        }
+
+        /* or 
+        for (let i = 0; i < names.length; i++) {
+            var currentName = names[i].toLowerCase() + "@gmail.com"     //imply function into loop
+            console.log(currentName)
+        } */
+
+        </script>
 
 
+        <h2>Example of longer Loop</h2>
 
-    </script>
+        <script>
+            var words = "Text bezeichnet im nichtwissenschaftlichen Sprachgebrauch eine abgegrenzte, zusammenhängende, meist schriftliche sprachliche Äußerung, im weiteren Sinne auch nicht geschriebene, aber schreibbare Sprachinformation. Aus sprachwissenschaftlicher Sicht sind Texte die sprachliche Form einer kommunikativen Handlung.".split(" ")
+            //"jhfh.".split(" ")
+            for (var i = 0; i < words.length; i++) {
+            var currentWord = words[i].toLowerCase() + "@gmail.com"     //imply function into loop
+
+/*how to stop:*/    if (i==10) {        //used to just do loop for 10 intervals
+                        break;          //stop running  
+                    }
+/*other example:*/  if (i%2==0) {   //nur alle geraden i werden ausgeführt
+                        continue;   //continue with next number (do not execute things below)
+                    }                   
+                    console.log(currentWord)
+                    }
+        
+        </script>
 
 
 
