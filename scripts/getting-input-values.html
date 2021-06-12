@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getting input values </title>
+</head>
+<body>
+
+    <h1>to get input form an input field use var.innerText = event.target.value</h1>
+
+    <input type="text" class="form-control js-name" id="text">
+
+    <h2>Hello <span id="name"></span></h2>
+
+
+
+
+
+    <script>
+        
+        var input = document.getElementById("text")
+        var nameElem = document.getElementById("name")
+
+        //keyup is a callback function (everytime move finger up from keyboard it executes function)
+        input.addEventListener('keyup', function(event) { // often just e for event
+            //console.log(event.target.value) //used to show in console
+            nameElem.innerText = event.target.value //used to update in span
+            
+        })
+
+        /*
+        function callback(event){
+            nameElem.innerText = event.target.value 
+        }
+        input.addEventListener('keyup', callback) */
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>changing css with event listeners</title>
+</head>
+<body>
+    <h1>changing css with event listeners</h1>
+    <h2>in javascript all names from css like background-color are changed to camel case --> backgroundColor</h2>
+
+    <div>
+        <label> Backgroung colour</label>
+        <input type="text" id="background" style="padding: 30px; font-size: 30px;">
+    </div>
+
+    <div>
+        <label> Text colour</label>
+        <input type="text" id="text" style="padding: 30px; font-size: 30px;">
+    </div>
+
+    <script>
+        var bgColor = document.getElementById("background")
+        var txColor = document.getElementById("text")
+        var body = document.querySelector("body")   //by moving it here code gets faster because it is stored
+                                                    //don't have to search document with every keyup
+        bgColor.style.borderRadius = "20px"     
+        txColor.style.border = "12px dotted black"      //used to set styling when page loads
+        body.style.backgroundColor = "yellow"
+        body.style.color = "black"
+
+
+
+
+        bgColor.addEventListener('keyup', function(event) {
+            console.log("bgColour", event.target.value)
+            //var body = document.querySelector("body")   //grab body element
+            body.style.backgroundColor = event.target.value //add style element (background colour) to it
+
+            switch(color){ //use switch and list all inputs that will change sth thrue listing cases
+                case 'red':     //case syntax: case 'element': not a ;
+                case 'whit':
+                case 'blue':
+                    body.style.backgroundColor = color  //used to change style in certain cases
+                    break
+                default:
+                    body.style.backgroundColor = "yellow"
+                    break
+            }
+
+
+
+        })
+
+        txColor.addEventListener('keyup', function(event) { //used to change style in every case
+            console.log("txColour", event.target.value)
+            body.style.color = event.target.value           //hexadecimal codes also work (#ffffff)
+        })
+
+
+    </script>
+</body>
+</html>

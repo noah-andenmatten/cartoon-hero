@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event listeners</title>
+</head>
+<body>
+    <h1>Event listeners</h1>
+    <p>most common event listeners are click and keypress (& blur)</p>
+
+
+    <button class="btn btn-primary btn-lg js-button" id="btn"> click me </button>
+
+    <div id="totalClicks"></div>
+
+    <script>
+
+        var btn = document.getElementById("btn")
+        var totalClicks = 0 //has to be outside of function (scope) to be modified globaly
+
+        //first parameter is type
+        btn.addEventListener('click', function(event) { //second parameter is a function
+            totalClicks ++ //= totalClicks= totalClicks +1
+
+            document.getElementById("totalClicks").innerText = totalClicks
+        })
+        
+        /* could also be written as:
+        function addClicks(event) { //second parameter is a function
+            totalClicks ++ //= totalClicks= totalClicks +1
+
+            document.getElementById("totalClicks").innerText = totalClicks
+        }
+        btn.addEventListener('click', addClicks) */
+
+
+    </script>
+
+
+
+
+</body>
+</html>

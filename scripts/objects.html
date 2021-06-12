@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>objects</title>
+</head>
+<body>
+    <h1>Objects can contain variables, lists, functions, etc <br/> 
+    can add to object using 'this'</h1>
+    <p>inside an object 'this' referes to object so if we console.log 
+        (this.name inside of the function in cats it still tells us "Noah")
+    </p>
+    <h2>used to store data in one variable (third demension to array)</h2>
+    <h3>1D= var, 2D= Array, 3D= Object </h3>
+
+    <!--    synthax (&use in console):
+    var objectName = {
+        "var1": "Noah", (can also be written as: 'var1')
+        "var2": 30,
+        "var3": "green"
+    }   to access:
+    varName.var3 or jsut varName
+    to add to object:
+    varName["var3"] = function(){
+        console.log("Meow")
+    }   -->
+
+    <script>
+        var name = "Noah"           //Variable
+        function sth() { }          //Function
+
+        var object = {
+            'name': "Noah",         //Property (belongs to object)
+            "cats": function() { }  //Method (inside of object)
+        }
+        // object['name'] will return "Noah"
+    </script>
+
+
+</body>
+</html>
