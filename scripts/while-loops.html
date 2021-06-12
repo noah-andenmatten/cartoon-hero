@@ -8,14 +8,41 @@
 </head>
 <body>
     
-
+    <h1>!ACHTUNG! (will run crash system or pc if it never ends)</h1>
 
 
     <script>
-        
+        var num = 0
+        while(num<=100){
+            console.log(num)    //will make pc cash because 0!=100
+            num++               //have to add this
+        }
+
+        var zahl = Number(prompt("Enter a number"))
+        var startingNum = 0
+        while (startingNum <= zahl) {
+            console.log(startingNum)
+            startingNum++
+        }
+
     </script>
 
+    <ul id="list"></ul>
 
+    <script>
+        var ul = document.getElementById("list")
+        console.log(ul)
+        var html = ''
+        var numero = Number(prompt("Enter num here"))
+
+        while (startingNum<= numero) {
+            html = html + "<li>Iteration:" +  startingNum + "</li>"
+            startingNum++
+        }
+        console.log(html)
+        ul.innerHTML = html
+
+    </script>
 
 </body>
 </html>

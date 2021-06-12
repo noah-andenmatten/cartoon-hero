@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For each Loop</title>
+</head>
+<body>
+    <h1>For each Loop</h1>
+    
+
+
+    <script>
+        var names = ["Noah", "Maui", "Kala", "Fishii"]
+
+        names.forEach(function(names, index) {      //arrayName.foreach(function(param.){do sth});
+            console.log(index, names)
+        });
+
+    </script>
+
+    <!--Example:-->
+    <li class="text">Item 1</li>
+    <li class="text">Item 2</li>
+    <li class="text">Item 3</li>
+    <li class="text">Item 4</li>
+    <li class="text">Item 5</li>
+    <li class="text">Item 6</li>
+    <li class="text">Item 7</li>
+    <li class="text">Item 8</li>
+    <li class="text">Item 9</li>
+
+    <script>
+        var lis = document.querySelectorAll(".text")    //!don't forget the . !
+
+        lis.forEach(function(node, index) { //node is from node list (query selector is now named node)
+            console.log(node.innerText)
+            if (index >= 5) {
+                node.remove()
+                return false;
+            }
+            node.innerHTML = index*12 + " is the number"
+        })
+    </script>
+
+</body>
+</html>
