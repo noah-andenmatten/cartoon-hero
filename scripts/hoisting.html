@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hoisting</title>
+</head>
+<body>
+    <h1>hoisting, scope and undefined</h1>
+    <h1>If we create any tipe of variable it will always be hoisted at the top of its scope</h1>
+    <script>
+
+        function getPerson() {
+            //var name; //declaring variable without a value (console.log = undefined) (null is a value) 
+            console.log(name)
+            var name = "Noah" //is equal to var name; at the top of scope and the name = "Noah" on this line
+            console.log(name)
+        }
+        /* console: undefined
+                    Noah
+                    undefined */
+        //typeof(undefined) = undefined
+
+    </script>
+
+    <h1>example:</h1>
+
+    <script>
+        function getPerson() {
+            if (myName === undefined) { //without var myName somwhere in scope console -> error
+                myName = "Noah"
+            }
+
+            console.log(myName)
+
+            var myName; //gets put at the top in the scope and function works
+        }
+    </script>
+
+    <script>
+        function getPerson(aName) {
+            if (aName === undefined) {  //equal to function (aName="Noah"), just sets default value
+                                        //but is legible in older codeversions as well
+                aName = "Noah"
+            }
+
+            console.log(aName)
+
+        }
+    </script>
+
+    
+</body>
+</html>

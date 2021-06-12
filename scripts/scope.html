@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scope</title>
+</head>
+<body>
+    
+    <h1>Scope = Bereich / Umfang</h1>
+    <p>var course is a <big>global variable</big>, always accessible. <br/>
+        var name is a <big>local variable</big> only accessible in its local ecosystem </p>
+
+    <script>
+        var course = "JavaScript for Beginners" //outer scope wraps around all things inside it and is 
+                                                //always accessible (like athmosphere)
+
+        function doAnything() {     //inner scope (planet)
+            var name = "Noah"       //is not accessible outside of this function (var is scoped to function)
+            console.log(course)     //always accessible
+            console.log(name)       //accessible insidde funtion
+
+            return course
+        }
+
+        console.log(name) //not accessible (out of scope) console gives us refference-error
+    </script>
+
+
+
+</body>
+</html>

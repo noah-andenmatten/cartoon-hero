@@ -7,13 +7,26 @@
     <title>'this'</title>
 </head>
 <body>
-    
+    <h1>This</h1>
+
+    <p>It is a keyword like return, var or dunction</p>
+    <br/>
+    <p>This is used in function or in an object to reference itself. Syntax: this.varname or this.functionname</p>
+
+    <script>
+
+        function getPerson(name) {
+            this.name = name //used to set variable (reusable)
+            this.hobby = "Rockclimbing" 
+            return this 
+        }
+
+        var Noah = getPerson("Noah")  //returns typeof(Noah) as an object
+
+    </script>
 
 
 
 
-
-
-    
 </body>
 </html>
