@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let and Const</title>
+</head>
+<body>
+    <h2> <big>var</big> is a variable that can scope to the <big>global environement</big></h2>
+    <h2> <big>let</big> is <big>block to scoped</big> to the closest {} </br>
+        & <big>can</big> be changed</h2>
+    <h2> <big>const</big> is <big>block to scoped</big> to the closest {} </br>
+        & <big>can not</big> be changed</h2>
+    
+
+
+    <script>
+/*      var name = "Noah"
+        let name = "Noah"       //gives more restriction
+        const name = "Noah"     //but is faster (less memory & cleaner)
+*/
+//example:
+        var course = "JS"
+
+        if (course == "JS") {
+            let sth = "sth"     //scoped to {}
+            sth = "sth else"    //can be overwritten
+            console.log(sth)    //works inside of {}
+            
+        }
+        //console.log(sth)      //is not defined outside of {}
+
+
+        if (course == "JS") {
+            const thing = "thing"     //scoped to {}
+            //thing = "thing else"    //can not be overwritten
+            console.log(thing)        //works inside of {}
+            
+        }
+        //console.log(thing)      //is not defined outside of {}
+
+    </script>
+
+
+
+
+</body>
+</html>

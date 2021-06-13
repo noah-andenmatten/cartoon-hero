@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOP</title>
+</head>
+<body>
+    <h1>OOP = Object Oriented Programming</h1>
+
+    <h2>class is used to group arrays with propertys into one single object</h2>
+    <h2>this keyword is used to pass parameter from constructer into Person class 
+        used to take variable from higer scope and changing its value</h2>
+
+
+
+
+    <script>
+        class Person {          //object and the function is a method (starts with capital Letter)
+            constructor(name, age, food){    //is a function
+                console.log(name, age, food)
+                this.name = name            //property in Person class called name
+                this.age = Number(age)      //used to pass param into Person class
+                this.food = food            //this keyword referes to class(object)
+            }
+
+            makeSound() {       //dont need to write the word function
+                console.log("Meow")
+                console.log(this.name + " says mmmh to " + this.food)
+            }
+        }
+
+        const noah = new Person ()  //matches class (stored)
+        const maui = new Person ("Maui", 2, "fisk")     //add default values
+        const nix = new Person("Nix", 23, "Tofu");
+        noah.makeSound()            //gets executed in console
+        maui.makeSound()            //dont need to rewrite whole function
+
+    </script>
+
+
+</body>
+</html>

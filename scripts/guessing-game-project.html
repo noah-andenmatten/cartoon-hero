@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessing Game Project</title>
+</head>
+<body>
+    <h1>Guessing Game Project</h1>
+
+    <ul>create a loop that always asks for a number</ul>
+    <ul>If the number is incorrect ask again</ul>
+    <ul>If the number is correct break out of the loop</ul>
+
+    <p id="text">You looose</p>
+    <input type="Number" id="enter">
+
+
+
+    <script>
+
+        var number = 12
+        //var numEnter = document.getElementById("enter").value
+        var body = document.querySelector("body")   //!not quereSelectorAll!
+        
+        var text = document.getElementById("text")
+
+        while (true) {
+            var numEnter = Number(prompt("Enter a number"))
+
+            if (numEnter && numEnter == number) {   //use additional if statement
+                alert("You win!")
+                //body.style.backgroundColor = "yellow"     //does not work
+                text.innerText = "YOU WIN!"
+                
+                break;  //can still use break because we are still inside of loop
+            }
+        }
+
+    </script>
+
+</body>
+</html>
