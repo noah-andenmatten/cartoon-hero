@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeout</title>
+</head>
+<body>
+    <h1>Timeout!</h1>
+    <p>choose time it takes to run function inside</p>
+    
+    <script>
+
+        console.log("First console log");
+
+        /*syntax timeout:
+        setTimeout(function() {}, time in milliseconds)
+        (1000ms = 1s) */
+
+        setTimeout(function(){
+            console.log("second console log");
+            const body = document.querySelector("body")
+            body.style.backgroundColor = "green"
+            body.style.color = "blue"
+        },3000)
+
+        console.log("Third console log");
+
+        /* oder of console logs shown in console:
+        -> first, -> third, -> second(after 3s) */
+    </script>
+
+    <h1>Interval</h1>
+    <p>choose time until function inside runs again</p>
+
+    <script>
+
+        setInterval(function(){
+            console.log("I am running");
+        }, 2000);
+
+        /* used for ex. to check if user is still logged in */
+
+/* other ex:
+        var logger = setInterval(function(){
+            console.log("I am running");
+        }, 1000);
+
+        setTimeout(function() {
+            clearInterval(logger)
+        }, 5000);
+
+    tells logger to stop after 5s with clearInterval() */
+    
+    </script>
+
+</body>
+</html>
