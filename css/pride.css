@@ -90,6 +90,7 @@ p.caption{
     font-size: 75%;
 }
 
+/* . used to access class*/
 .box{
     border: 2px solid blueviolet;
     margin-left: 20vw;

@@ -7,7 +7,7 @@
     <title>OOP</title>
 </head>
 <body>
-    <h1>OOP = Object Oriented Programming</h1>
+    <h1>OOP = Object Oriented Programming & extending classes</h1>
 
     <h2>class is used to group arrays with propertys into one single object</h2>
     <h2>this keyword is used to pass parameter from constructer into Person class 
@@ -37,6 +37,58 @@
         noah.makeSound()            //gets executed in console
         maui.makeSound()            //dont need to rewrite whole function
 
+    </script>
+
+    <script>
+//extending classes example:
+        class Animal {
+            constructor(species, weight, height){
+                this.species = String(species)
+                this.weight = Number(weight)
+                this.height = Number(height)
+            }
+            getInfo(){
+                console.log(
+                    this.species + " weighs " + 
+                    this.weight + " and is " + 
+                    this.height + " tall"
+                )
+            }
+            
+            speak(){
+                console.log("i say a thing ")
+            }
+        }
+
+
+        class Cat extends Animal {                          //add cat to extend Animal
+            constructor(species, weight, height){
+                super(species, weight, height)             //tells to go up to Animal and run what function currently is
+
+                this.color = "Black"
+            }
+
+            sleep() {
+                console.log(this.species + " sleeps 17h a day")
+                return this;        //will return entire cat object
+            }
+
+            speak(){
+                console.log("MEOW")         //overwrites speak function in Animal class for all Cat
+                return this;
+            }
+        }
+        const kala = new Cat("Kala", 4, 22);
+        console.log(kala)
+        kala.getInfo()
+        kala.sleep()
+        kala.speak()
+        //because of adding return this we can now say:
+        kala.sleep().speak().sleep()
+
+
+        const tiger = new Animal("Tiger", 200, 36)
+        tiger.getInfo()
     </script>
 
 
